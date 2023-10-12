@@ -14,6 +14,8 @@ remove:
 
 aareload:
 	(rm RData/*;true)
+	cat R/*.R > PhyloSimSource.R
 	R --vanilla < misc/recreate_aamodels.R
 	R --vanilla < misc/recreate_codonmodels.R
+	rm -fr PhyloSimSource.R
 
