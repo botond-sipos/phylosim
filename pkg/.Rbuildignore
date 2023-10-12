@@ -1,6 +1,0 @@
-.gitignore
-R/.gitignore
-man/.gitignore
-vignettes/.gitignore
-inst/.gitignore
-data/.gitignore
