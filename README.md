@@ -15,10 +15,20 @@ It is built on the top of the [R.oo](http://cran.r-project.org/web/packages/R.oo
 
 Botond Sipos, Tim Massingham, Gregory E Jordan and Nick Goldman (2011) <i>PhyloSim - Monte Carlo simulation of sequence evolution in the R statistical computing environment</i> - BMC Bioinformatics 12:104 [doi:10.1186/1471-2105-12-104](http://dx.doi.org/10.1186/1471-2105-12-104)
 
-Download an install
--------------------
+Install
+-------
 
-The released packages are available from [CRAN](http://cran.r-project.org/web/packages/phylosim).
+The most practical way to install the package is using the `devtools` package:
+
+```bash
+library(devtools)
+install_github("botond-sipos/phylosim")
+```
+
+Help
+----
+
+A tutorial is available in the [package vignette](https://github.com/botond-sipos/phylosim/blob/master/doc/PhyloSim.pdf?raw=true).
 
 Key features
 ------------
@@ -43,4 +53,4 @@ Key features
 
 * The possibility to export the counts of various events ("branch statistics") as <tt>phylo</tt> objects (see the man page of <tt>exportStatTree.PhyloSim</tt>).
 
-* See the man page of the <tt>PhyloSim</tt> class and the package vignette for more features and examples.
+* See the man page of the <tt>PhyloSim</tt> class and the [package vignette](https://github.com/botond-sipos/phylosim/blob/master/doc/PhyloSim.pdf?raw=true) for more features and examples.
