@@ -1,5 +1,5 @@
 
-![Gillespie algorithm](https://raw.github.com/sbotond/phylosim/master/misc/gillespie.png)
+![Gillespie algorithm](https://raw.github.com/botond-sipos/phylosim/master/misc/gillespie.png)
 
 PhyloSim
 ========
@@ -44,9 +44,3 @@ Key features
 * The possibility to export the counts of various events ("branch statistics") as <tt>phylo</tt> objects (see the man page of <tt>exportStatTree.PhyloSim</tt>).
 
 * See the man page of the <tt>PhyloSim</tt> class and the package vignette for more features and examples.
-
-Building from source
-------------------------
-
-The package can be built from the source by issuing <tt>make pack</tt> on a <tt>*nix</tt> system. The building process need the standard unix tools, <tt>Perl</tt> and <tt>R</tt> with the <tt>ape</tt>, <tt>R.oo</tt>, <tt>ggplot2</tt> and <tt>compoisson</tt> packages installed.
-
