@@ -2,7 +2,6 @@ exportPattern("^[^\\.]");
 import(grid)
 import(R.oo)
 import(ape)
-import(compoisson)
 import(ggplot2)
 import(R.methodsS3)
 

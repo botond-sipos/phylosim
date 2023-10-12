@@ -99,7 +99,7 @@ setConstructorS3(
 	)	{
 
 			# supported types
-			ALLOWED.TYPES=c("geometric","poisson","neg.binomial","compoisson");
+			ALLOWED.TYPES=c("geometric","poisson","neg.binomial");
 
 			# Creating a GeneralDeletor Process.
 			this<-GeneralDeletor(
@@ -171,11 +171,6 @@ setConstructorS3(
 						express<-expression(1 + rnbinom(1,this$.length.param.2,prob=( 1 - ( this$.length.param.1 * d))) );
 					}
 					
-					# Conway-Maxwell Poisson + 1:
-					else if(this$.type == "compoisson"){
-						express<-expression(1 + rcom(1,lambda=( this$.length.param.1 * d), nu = this$.length.param.2));
-					}
-					
 					return( round( eval(express) ) );
 
 			} # /proposeBy
@@ -222,9 +217,9 @@ setMethodS3(
 						throw("Length parameter 1 is NA! Cannot generate events or propose lengths!\n");
 					}
 					# Check length parameter 2:
-					if(length(intersect(c("neg.binomial","compoisson"),this$.type)) != 0) {
+					if(length(intersect(c("neg.binomial"),this$.type)) != 0) {
 						if(is.na(this$.length.param.2)){
-							throw("Length parameter 1 is NA! Cannot generate events or propose lengths!\n");
+							throw("Length parameter 2 is NA! Cannot generate events or propose lengths!\n");
 						}
 					}
 
@@ -1051,11 +1046,6 @@ setMethodS3(
 			exp<-expression( d * ( ( (1 - this$.length.param.1) / (1 - (d * this$.length.param.1))) ^ this$.length.param.2) );
 		}
 	
-		# Conway-Maxwell Poisson	+ 1:
-		else if(this$.type=="compoisson"){
-			exp<-expression( d * (com.compute.z(lambda=this$.length.param.1,nu=this$.length.param.2 ) / com.compute.z(lambda=(d * this$.length.param.1),nu=this$.length.param.2 )) );
-		}
-			
 		return(eval(exp));	
 
   },
