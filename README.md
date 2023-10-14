@@ -22,7 +22,7 @@ The most practical way to install the package is using the `devtools` package:
 
 ```bash
 library(devtools)
-install_github("botond-sipos/phylosim")
+install_github("botond-sipos/phylosim", build_manual=TRUE, build_vignettes=FALSE)
 ```
 
 Help

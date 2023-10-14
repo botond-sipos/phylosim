@@ -1,5 +1,5 @@
-PAMLdat
-RData
-Makefile
-examples
-misc
+^PAMLdat$
+^RData$
+^Makefile$
+^examples$
+^misc$
