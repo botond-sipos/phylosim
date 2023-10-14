@@ -43,7 +43,7 @@
 
 \item{Serious users might consider reading all class documentations which provide more focused examples.}
 
-\item{Additional example scripts can be found at \href{http://github.com/sbotond/phylosim/tree/master/examples}{http://github.com/sbotond/phylosim/tree/master/examples}}
+\item{Additional example scripts can be found at \href{http://github.com/botond-sipos/phylosim/tree/master/examples}{http://github.com/botond-sipos/phylosim/tree/master/examples}}
 
 \item{The \code{ll()} method list the methods and virtual field implemented in the immediate class of an object which is useful as ``proto-documentation''.}
 
